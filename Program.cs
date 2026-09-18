@@ -6,6 +6,25 @@ class Program
     
      static void Main(string[] args)
         {
+            // Create an instance of the Car class
+            Car myCar = new Car();
+             // Set properties of the Car instance
+            myCar.Make = "Toyota";
+            myCar.Model = "Camry";
+            myCar.Year = 2020;  
+
+            //use it properties and call itmethods
+            Console.WriteLine($" i drive a:{myCar.Year} {myCar.Make} {myCar.Model}");
+            myCar.Honk();
+
+             friendsCar friendsCar = new friendsCar();
+            friendsCar.Make = "Impala";
+            friendsCar.Model = "Civic";
+            friendsCar.Year = 2019;
+            //use it properties and call itmethods  
+            Console.WriteLine($"My friend drives a:{friendsCar.Year} {friendsCar.Make} {friendsCar.Model}");
+            friendsCar.Humming();
+
              bool runningstate = true;
             do
             {
@@ -14,7 +33,7 @@ class Program
              Console.WriteLine("2.  Add multiple numbers(using itiration)");
              Console.WriteLine("3.  Exit");
              Console.Write("Enter your choice(1,2, or3): ");
-                string choice = Console.ReadLine();
+                string choice = Console.ReadLine()??"";
                 if (choice == "1")
                 {
                     RunBasicMath();
@@ -46,7 +65,7 @@ class Program
             Console.WriteLine("Enter the second number:");
             double num2 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Choose an operation (+, -, *, /):");
-            string operation = Console.ReadLine();
+            string operation = Console.ReadLine()??"";
             double result = 0;
             bool validOperation = true;
 
@@ -112,7 +131,7 @@ class Program
 
             // while loop is good when you want to keep running until a certain condition is met, like user input or a specific event. In this case, the while loop is used to keep the calculator running until the user chooses to exit. 
             Console.Write("Do you want to add more numbers? (y/n): ");
-                string choice = Console.ReadLine();
+                string choice = Console.ReadLine()??"n"; // Default to "n" if null
                 while (choice.ToLower() == "y" )
                {
     
