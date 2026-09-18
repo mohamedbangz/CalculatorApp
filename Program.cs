@@ -6,6 +6,21 @@ class Program
     
      static void Main(string[] args)
         {
+            // the garage to hold multiple cars
+            List<Car> myGarage = new List<Car>();
+            myGarage.Add(new Car("Toyota", "Camry", 2020));
+            myGarage.Add(new Car("Chevrolet", "Impala", 2019));
+            myGarage.Add(new Car("Ford", "Mustang", 2021));
+            myGarage.Add(new Car("Honda", "Civic", 2022));
+            // loop through the garage and display each car's details
+  
+            Console.WriteLine("==My Garage:==");
+            foreach (Car car in myGarage)
+            {
+                Console.WriteLine($"I drive a: {car.Year} {car.Make} {car.Model}");
+                car.Honk();
+            }
+
             // Create an instance of the Car class
             Car myCar = new Car(    
                 make: "Toyota",
@@ -21,12 +36,12 @@ class Program
             myCar.Honk();
 
              friendsCar friendsCar = new friendsCar(    
-                make: "Impala",
-                model: "Civic",
+                make: "Chevrolet",
+                model: "Impala",
                 year: 2019);
             //use it properties and call itmethods  
             Console.WriteLine($"My friend drives a:{friendsCar.Year} {friendsCar.Make} {friendsCar.Model}");
-            friendsCar.Humming();
+            friendsCar.Honk();
 
              bool runningstate = true;
             do

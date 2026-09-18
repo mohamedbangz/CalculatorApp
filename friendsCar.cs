@@ -12,7 +12,7 @@
             Year = year;
         }   
 
-        public void Humming()
+        public void Honk()
         {
             Console.WriteLine("peeeee peeeeee!");
              
