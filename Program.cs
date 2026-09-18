@@ -20,12 +20,22 @@ class Program
                 Console.WriteLine($"I drive a: {car.Year} {car.Make} {car.Model}");
                 car.Honk();
             }
-
+           // creat a list of cars to be parked in the garage
+           Car myCar = new Car("Toyota", "Camry", 2020);
             // Create an instance of the Car class
-            Car myCar = new Car(    
-                make: "Toyota",
-                model: "Camry",
-                year: 2020);
+            Car   friendCar  = new Car( "Chevrolet", "Impala", 2019); 
+            // Create an instance of the friendsCar class LIST
+            List<Car> myGarage2 = new List<Car>();
+            //add you existing variables to the list
+            myGarage2.Add(myCar);
+            myGarage2.Add(friendCar);
+            // you can also create and add a new Car instance directly to the list
+            myGarage2.Add(new Car("Ford", "Mustang", 2021));
+
+
+                //make: "Toyota",
+               // model: "Camry",
+                //year: 2020);
              // Set properties of the Car instance
             myCar.Make = "Toyota";
             myCar.Model = "Camry";
