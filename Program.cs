@@ -7,7 +7,10 @@ class Program
      static void Main(string[] args)
         {
             // Create an instance of the Car class
-            Car myCar = new Car();
+            Car myCar = new Car(    
+                make: "Toyota",
+                model: "Camry",
+                year: 2020);
              // Set properties of the Car instance
             myCar.Make = "Toyota";
             myCar.Model = "Camry";
@@ -17,10 +20,10 @@ class Program
             Console.WriteLine($" i drive a:{myCar.Year} {myCar.Make} {myCar.Model}");
             myCar.Honk();
 
-             friendsCar friendsCar = new friendsCar();
-            friendsCar.Make = "Impala";
-            friendsCar.Model = "Civic";
-            friendsCar.Year = 2019;
+             friendsCar friendsCar = new friendsCar(    
+                make: "Impala",
+                model: "Civic",
+                year: 2019);
             //use it properties and call itmethods  
             Console.WriteLine($"My friend drives a:{friendsCar.Year} {friendsCar.Make} {friendsCar.Model}");
             friendsCar.Humming();
