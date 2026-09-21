@@ -19,6 +19,7 @@ class Program
             {
                 Console.WriteLine($"I drive a: {car.Year} {car.Make} {car.Model}");
                 car.Honk();
+                car.StartEngine();
             }
            // creat a list of cars to be parked in the garage
            Car myCar = new Car("Toyota", "Camry", 2020);
@@ -45,13 +46,15 @@ class Program
             Console.WriteLine($" i drive a:{myCar.Year} {myCar.Make} {myCar.Model}");
             myCar.Honk();
 
-             friendsCar friendsCar = new friendsCar(    
+             FriendsCar friendsCar = new FriendsCar(    
                 make: "Chevrolet",
                 model: "Impala",
                 year: 2019);
             //use it properties and call itmethods  
             Console.WriteLine($"My friend drives a:{friendsCar.Year} {friendsCar.Make} {friendsCar.Model}");
             friendsCar.Honk();
+            friendsCar.StartEngine();
+            // calculator code 
 
              bool runningstate = true;
             do
