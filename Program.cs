@@ -7,6 +7,7 @@ class Program
      static void Main(string[] args)
         {
             // the garage to hold multiple cars
+            
             List<Car> myGarage = new List<Car>();
             myGarage.Add(new Car("Toyota", "Camry", 2020));
             myGarage.Add(new Car("Chevrolet", "Impala", 2019));
@@ -25,22 +26,25 @@ class Program
            Car myCar = new Car("Toyota", "Camry", 2020);
             // Create an instance of the Car class
             Car   friendCar  = new Car( "Chevrolet", "Impala", 2019); 
+            Car myMotorcycle = new Car("Honda", "CB500", 2023);
             // Create an instance of the friendsCar class LIST
             List<Car> myGarage2 = new List<Car>();
             //add you existing variables to the list
             myGarage2.Add(myCar);
             myGarage2.Add(friendCar);
+            myGarage2.Add(myMotorcycle);
             // you can also create and add a new Car instance directly to the list
             myGarage2.Add(new Car("Ford", "Mustang", 2021));
+            myGarage2.Add(new Car("Yamaha", "MT-07", 2022));
 
 
                 //make: "Toyota",
                // model: "Camry",
                 //year: 2020);
              // Set properties of the Car instance
-            myCar.Make = "Toyota";
-            myCar.Model = "Camry";
-            myCar.Year = 2020;  
+           // myCar.Make = "Toyota";
+           // myCar.Model = "Camry";
+           // myCar.Year = 2020;  
 
             //use it properties and call itmethods
             Console.WriteLine($" i drive a:{myCar.Year} {myCar.Make} {myCar.Model}");
@@ -56,7 +60,7 @@ class Program
             friendsCar.StartEngine();
             // calculator code 
 
-             bool runningstate = true;
+             bool runningstate = true; 
             do
             {
              Console.WriteLine("\nchoose a mode:");
